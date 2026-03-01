@@ -11,7 +11,7 @@ from PyQt5.QtGui import QIcon, QFont, QImage, QPixmap
 from PyQt5.QtCore import Qt, QThread, pyqtSignal, pyqtSlot
 from pynput.mouse import Controller, Button
 
-# --- CONFIGURATION ---
+# CONFIGURATION
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 LOGO_PATH = os.path.join(BASE_DIR, "assets", "logo", "download.jpg")
 SCREEN_WIDTH, SCREEN_HEIGHT = pyautogui.size()
@@ -32,8 +32,6 @@ class CameraWorker(QThread):
     def run(self):
         self.status_signal.emit("Initializing Camera...")
         
-        # 1. ROBUST CAMERA DISCOVERY
-        # Try index 0 and 1 (Macs often hide cam on 1)
         cap = None
         for index in [0, 1]:
             self.status_signal.emit(f"Testing Camera Index {index}...")
@@ -83,7 +81,7 @@ class CameraWorker(QThread):
                     thumb_tip = hand.landmark[4]
                     
                     # --- MOVEMENT LOGIC (SMOOTHING) ---
-                    margin = 0.15  # 15% margin for easier edge reach
+                    margin = 0.15  
                     x = (index_tip.x - margin) / (1 - 2 * margin)
                     y = (index_tip.y - margin) / (1 - 2 * margin)
                     x = np.clip(x, 0, 1)
