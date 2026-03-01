@@ -17,7 +17,9 @@ opencv, mediapipe, pyautogui, numpy, PyQt5 and pynput.
 
 Use this command to install them:
 
+```bash
 pip install opencv-python mediapipe pyautogui numpy PyQt5 pynput
+```
 
 After they are installed you can move around with your index and pinch your index with your thumb to click on something.
 
