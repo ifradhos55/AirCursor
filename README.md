@@ -11,6 +11,22 @@ Air-Cursor lets you control your computer mouse using your hand in front of the 
 * Scroll up with a thumbs up gesture
 * Scroll down with a thumbs down gesture
 
+## Requirements
+To run this program you need to install these libraries and frameworks:
+
+* OpenCV (for camera feed)
+* MediaPipe (for hand tracking)
+* PyAutoGUI (for mouse control)
+* NumPy (for math operations)
+* PyQt5 (for the user interface)
+* Pynput (for secondary mouse control)
+
+Use this command in your terminal to install everything:
+
+pip install opencv-python mediapipe pyautogui numpy PyQt5 pynput
+
+It is best to use Python 3.11 or newer.
+
 ## How to run
 To run the program, use this command in your terminal:
 
