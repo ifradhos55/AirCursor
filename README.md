@@ -4,11 +4,15 @@ This is An Air Gesture based Cursor using MediaPipe and OpenCV.
 
 ## How to run
 
-To run the program, use the following command:
+To run the program:
 
-python testhands.py
+Clone the repository:
 
-It takes a few second to initially launch so just wait for it.
+```bash
+git clone https://github.com/ifradhos55/AirCursor.git
+```
+
+Then just run testhands.py
 
 ## How to use
 
